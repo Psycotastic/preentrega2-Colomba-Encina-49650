@@ -131,6 +131,22 @@ nav ul li {
 
 /*Sobre Mí*/
 
+.wrapper {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    height: 100vh;
+}
+
+.uno {
+    grid-column: 1;
+}
+
+.dos {
+    grid-column: 2;
+}
+
 /*MEDIA QUERY: Tablet*/
 @media (min-width: 768px) and (max-width: 1024px) { 
 
