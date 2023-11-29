@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+}
+
+header a img {
+    width: 100px;
+}
+
+h1 {
+    font-size: 3rem !important;
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+p {
+    font-size: 0.8rem;
+}
+
+/*Cuerpo*/
+
+main {
+    width: 100%;
+    height: 100vh;
+}
+
+.cuerpo {
+    display: flex;
+    flex-direction: row;
+}
+
+.d-flex {
+    display: flex;
+}
+
+/*Barra Navegación*/
+
+nav {
+    padding: 10px;
+    width: 150px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav a img {
+    width: 100%;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+/*Index*/
+
+.fura-main {
+    height: 100vh;
+    width: 100vw;
+}
+
+.fura-main p {
+    background: rgba(0,0,0,0.5);
+    padding: 1rem;
+    position: absolute;
+    width: 10%;
+    bottom: 40%;
+    right: 25%;
+}
+
+/*Contacto*/
+
+.contacto {
+    height: 100vh;
+    align-content: center;
+}
+
+.contacto > div {
+    width: 50%;
+    padding: 0 5%;
+}
+
+.contacto h1{
+    text-align: right;
+}
+
+.contacto .logovgen {
+    width: 80%;
+}
+
+.contacto .logovgen img {
+    width: 100%;
+}
+
+.contacto .contactame {
+    align-items: center;
+}
+
+.contacto .redes {
+    flex-direction: column;
+}
+
+.contacto .redes div > div {
+    width: 15%
+}
+
+/*Portafolio y Servicios*/
+.servicios .cajas div.flex-wrap > div {
+    width: 45%;
+    padding: 2%;
+    margin: 2%;
+}
+
+.servicios .cajas > div {
+    width: 50%;
+}
+
+.servicios .cajas > div:first-child {
+    justify-content: space-between;
+}
+
+.servicios .cajas div.flex-wrap > div:nth-last-child(1) {
+    width: 100%;
+    padding: 5%;
+    margin: 0;
+}
+
+.servicios .cajas div.flex-wrap div > div:nth-last-child(1) {
+    text-align: center;
+}
+
+.servicios .cajas h1 {
+    width: 100%;
+    padding: 15vh 0 0 0;
+}
+
+/*Sobre Mí*/
+
+/*MEDIA QUERY: Tablet*/
+@media (min-width: 768px) and (max-width: 1024px) { 
+
+}
+
+/*MEDIA QUERY: Mobile*/
+@media (min-width: 0px) and (max-width: 768px) {
+    /*Cuerpo*/
+    .cuerpo {
+        flex-direction: column;
+    }
+
+    /*Barra Navegación*/
+
+    header {
+        height: auto;
+    }
+
+    nav {
+        width: 100vw;
+        flex-direction: row;
+        height: auto;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /*Contacto*/
+
+    .contacto {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contacto > div {
+        width: 100%;
+    }
+
+    .contacto h1 {
+        text-align: left;
+    }
+
+    .contactame {
+        text-align: center;
+    }
+
+    .redes .row {
+        justify-content: center;
+    }
+
+    .contacto .redes div div {
+        width: 35%;
+        padding: 7%;
+    }
+
+    .contacto .redes {
+        justify-content: center;
+    }
+
+    .contacto .redes > div {
+        justify-content: center;
+    }
+
+    /*Portafolio y Servicios*/
+
+    .servicios .cajas {
+        flex-direction: column-reverse !important;
+    }
+    .servicios .cajas div.flex-wrap > div {
+        width: 100%;
+        padding: 5%;
+    }
+
+    .servicios .cajas > div {
+        width: 100%;
+    }
+
+    .servicios .cajas > div:nth-last-child(1){
+        height: 30vh;
+    }
+}
