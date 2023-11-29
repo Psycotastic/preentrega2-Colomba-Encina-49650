@@ -42,6 +42,10 @@ main {
     display: flex;
 }
 
+.row {
+    margin: 0 !important;
+}
+
 /*Barra Navegación*/
 
 nav {
@@ -81,32 +85,20 @@ nav ul li {
 
 .contacto {
     height: 100vh;
-    align-content: center;
-}
-
-.contacto > div {
-    width: 50%;
-    padding: 0 5%;
 }
 
 .contacto h1{
     text-align: right;
 }
 
-.contacto .logovgen {
-    width: 80%;
-}
-
-.contacto .logovgen img {
-    width: 100%;
-}
-
-.contacto .contactame {
-    align-items: center;
-}
-
-.contacto .redes {
+.contacto .redes.d-flex,
+.contacto .contactame.d-flex {
     flex-direction: column;
+    justify-content: center;
+}
+
+.contacto .redes div a > img {
+    width: 100%;
 }
 
 .contacto .redes div > div {
@@ -128,19 +120,13 @@ nav ul li {
     justify-content: space-between;
 }
 
-.servicios .cajas div.flex-wrap > div:nth-last-child(1) {
-    width: 100%;
-    padding: 5%;
-    margin: 0;
-}
-
-.servicios .cajas div.flex-wrap div > div:nth-last-child(1) {
-    text-align: center;
-}
-
 .servicios .cajas h1 {
     width: 100%;
     padding: 15vh 0 0 0;
+}
+
+.servicios .cajas .row div > div:nth-last-child(1) {
+    text-align: center;
 }
 
 /*Sobre Mí*/
@@ -179,6 +165,7 @@ nav ul li {
     .contacto {
         justify-content: center;
         align-items: center;
+        align-content: center;
     }
 
     .contacto > div {
@@ -202,10 +189,6 @@ nav ul li {
         padding: 7%;
     }
 
-    .contacto .redes {
-        justify-content: center;
-    }
-
     .contacto .redes > div {
         justify-content: center;
     }
@@ -214,10 +197,6 @@ nav ul li {
 
     .servicios .cajas {
         flex-direction: column-reverse !important;
-    }
-    .servicios .cajas div.flex-wrap > div {
-        width: 100%;
-        padding: 5%;
     }
 
     .servicios .cajas > div {
