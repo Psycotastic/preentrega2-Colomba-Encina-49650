@@ -1,9 +1,11 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-
+    overflow: hidden;
 }
 
 header a img {
@@ -44,6 +46,11 @@ main {
 
 .row {
     margin: 0 !important;
+}
+
+.wrapper {
+    display: grid;
+    height: 100vh;
 }
 
 /*Barra Navegación*/
@@ -129,21 +136,99 @@ nav ul li {
     text-align: center;
 }
 
+.portafolio {
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 10% 10% 10% 10% 10% 23%;
+    grid-gap: 1%;
+}
+
+.portafolio h1 {
+    grid-column: 1 / 2;
+    grid-row: 2;
+}
+
+.portafolio .uno {
+    grid-column: 1 / 2;
+    grid-row: 3;
+}
+
+.portafolio .dos {
+    grid-column: 1 / 2;
+    grid-row: 4;
+}
+
+.portafolio .tres {
+    grid-column: 1 / 2;
+    grid-row: 5;
+}
+
+.portafolio .cuatro {
+    height: 100vh;
+    grid-column: 2;
+    overflow: hidden;
+    grid-row: 1;
+}
+
+.portafolio > div:nth-child(2), 
+.portafolio > div:nth-child(3), 
+.portafolio > div:nth-child(4) {
+    width: 100%;
+    border: solid;
+    padding: 3%;
+    display: flex;
+    align-items: center;
+}
+
+.portafolio .cuatro > div {
+    width: 100%;
+    height: 100%;
+}
+
+.portafolio .cuatro div:nth-child(1) {
+    background: url('../img/ilus-naorta.png')90% 0 no-repeat;
+    position: relative;
+    opacity: 0;
+}
+
+.portafolio .cuatro div:nth-child(2) {
+    background: url('../img/ilus-naorta.png')90% 0 no-repeat;
+    position: relative;
+    opacity: 0;
+    top: -100%;
+}
+
+.portafolio .cuatro div:nth-child(3) {
+    background: url('../img/ilus-naorta.png')90% 0 no-repeat;
+    position: relative;
+    opacity: 0;
+    top: -200%;
+}
+
+.portafolio .uno:hover ~ .cuatro div:nth-child(1){
+    opacity: 1;
+}
+
+.portafolio .dos:hover ~ .cuatro div:nth-child(2){
+    opacity: 1;
+}
+
+.portafolio .tres:hover ~ .cuatro div:nth-child(3){
+    opacity: 1;
+}
+
 /*Sobre Mí*/
 
-.wrapper {
-    display: grid;
+.sobre {
     grid-auto-columns: 1fr;
     grid-gap: 10px;
     align-items: center;
-    height: 100vh;
 }
 
-.uno {
+.sobre.wrapper .uno {
     grid-column: 1;
 }
 
-.dos {
+.sobre.wrapper .dos {
     grid-column: 2;
 }
 
